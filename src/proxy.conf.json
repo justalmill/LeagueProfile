@@ -1,0 +1,12 @@
+{
+    "/api/*": {
+        "target": {
+            "host": "na1.api.riotgames.com",
+            "protocol": "https:",
+            "port": "443"
+        },
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

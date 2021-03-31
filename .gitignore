@@ -40,6 +40,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/server/static/dragon
 
 # System Files
 .DS_Store
