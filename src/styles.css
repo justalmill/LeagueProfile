@@ -2,3 +2,6 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.icon-name {width: 150px; padding-top: 5px}
+.champ-icon {width: 46px; height: 46px; object-fit: cover; border-radius: 50%;}
+.match-container { border: 1px solid rgba(0,0,0,.125)}
