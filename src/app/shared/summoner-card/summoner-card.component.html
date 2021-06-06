@@ -1,0 +1,13 @@
+<div style="display: flex; border: 1px solid rgba(0,0,0,.125);">
+    <div style="width:40%">
+        <img class="card-img-top" src="http://localhost:8080/dragon/img/profileicon/{{summoner.profileIconId}}.png"
+            alt="Card image cap">
+    </div>
+    <div>
+        <div class="card-body">
+            <h5 class="card-title">{{summoner.name}}</h5>
+            <p class="card-text">lvl {{summoner.summonerLevel}}</p>
+            <p *ngIf="rank" class="card-text">{{rank.tier}} {{rank.rank}}</p>
+        </div>
+    </div>
+</div>

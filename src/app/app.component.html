@@ -16,54 +16,13 @@
     </form>
   </div>
 </nav>
-<div class="row" style="margin-top: 10px" *ngIf="summoner">
+<div class="" style="margin-top: 10px; display: flex;" *ngIf="summoner">
   <!-- TODO move this into a separate component -->
-  <div class="col-md-2" style="min-width: 300px">
-    <div style="display: flex; border: 1px solid rgba(0,0,0,.125);">
-      <div style="width:40%">
-        <img class="card-img-top" src="http://localhost:8080/dragon/img/profileicon/{{summoner.profileIconId}}.png" alt="Card image cap">
-      </div>
-      <div>
-        <div class="card-body">
-          <h5 class="card-title">{{summoner.name}}</h5>
-          <p class="card-text">lvl {{summoner.summonerLevel}}</p>
-          <p *ngIf="rank" class="card-text">{{rank.tier}} {{rank.rank}}</p>
-        </div>
-      </div>
-    </div>
-    <div style="padding-top: 20px; padding-bottom:20px; border: 1px solid rgba(0,0,0,.125); width: 100%;">
-      <div style="padding-left: 20px;" *ngFor="let champ of (champMastery ? champMastery.slice(0,10): []); let i=index">
-        <div style="display:-webkit-inline-box; padding-right:10px; padding-bottom: 15px; width: 100%;">
-          <img class="champ-icon" src="http://localhost:8080/dragon/img/champion/{{champ.champIcon}}.png"> 
-          <div style="margin: auto; margin-left: 10px">
-            <p style="margin-bottom: 0px">{{champ.champName}}</p>
-            <p style="margin-bottom: 0px">{{champ.championPoints}} points</p>
-          </div>
-          <img class="champ-icon" src="http://localhost:8080/mastery/Mastery{{champ.championLevel}}.webp">
-        </div>
-      </div>
-    </div>
+  <div class="col-md-2" style="min-width: 300px;">
+    <app-summoner-card [rank]="rank" [summoner]="summoner"></app-summoner-card>
+    <app-summoner-mastery [champMastery]="champMastery"></app-summoner-mastery>
   </div>
   <div class="col-md-10">
-    <div *ngFor="let game of matchHistory">
-      <div class="match-container">
-        <div style="display:flex; flex:wrap">
-          <div class="col-md-1" style="display:flex;">
-            <div class="icon-name">
-              <img class="champ-icon" style="margin:auto; display: block;" src="http://localhost:8080/dragon/img/champion/{{game.player.championName}}.png"> 
-              <p style="text-align: center;">{{game.player.championName}}</p>
-            </div>
-            <div class="">
-              <img style="height: 32px; width: 32px;" src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner1Name}}.png">
-              <img style="height: 32px; width: 32px;" src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner2Name}}.png">
-            </div>
-          </div>
-          <div class="col-md-1">
-            <p>{{game.info.gameMode}}</p>
-            <p>KDA: {{game.player.kills}}/{{game.player.deaths}}/{{game.player.assists}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-match-history [matchHistory]="matchHistory"></app-match-history>
   </div>
 </div>

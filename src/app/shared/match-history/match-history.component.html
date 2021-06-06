@@ -1,0 +1,23 @@
+<div *ngFor="let game of matchHistory">
+    <div class="match-container">
+        <div style="display:flex; flex:wrap">
+            <div class="" style="display:flex; width: 140px;">
+                <div class="icon-name">
+                    <img class="champ-icon" style="margin:auto; display: block;"
+                        src="http://localhost:8080/dragon/img/champion/{{game.player.championName}}.png">
+                    <p style="text-align: center;">{{game.player.championName}}</p>
+                </div>
+                <div class="" style="margin: auto;">
+                    <img style="height: 32px; width: 32px;"
+                        src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner1Name}}.png">
+                    <img style="height: 32px; width: 32px;"
+                        src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner2Name}}.png">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <p>{{game.info.gameMode}}</p>
+                <p>KDA: {{game.player.kills}}/{{game.player.deaths}}/{{game.player.assists}}</p>
+            </div>
+        </div>
+    </div>
+</div>

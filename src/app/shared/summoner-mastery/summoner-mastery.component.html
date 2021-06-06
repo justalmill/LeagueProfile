@@ -1,0 +1,12 @@
+<div style="padding-top: 20px; padding-bottom:20px; border: 1px solid rgba(0,0,0,.125); width: 100%;">
+    <div style="padding-left: 20px;" *ngFor="let champ of (champMastery ? champMastery.slice(0,10): []); let i=index">
+        <div style="display:-webkit-inline-box; padding-right:10px; padding-bottom: 15px; width: 100%;">
+            <img class="champ-icon" src="http://localhost:8080/dragon/img/champion/{{champ.champIcon}}.png">
+            <div style="margin: auto; margin-left: 10px">
+                <p style="margin-bottom: 0px">{{champ.champName}}</p>
+                <p style="margin-bottom: 0px">{{champ.championPoints}} points</p>
+            </div>
+            <img class="champ-icon" src="http://localhost:8080/mastery/Mastery{{champ.championLevel}}.webp">
+        </div>
+    </div>
+</div>
