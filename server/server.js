@@ -62,7 +62,7 @@ summonerSpells.set(14, "Dot");
 summonerSpells.set(21, "Barrier");
 summonerSpells.set(32, "Snowball");
 
-var api_key = 'RGAPI-9eae8f2d-67de-4f01-9ff1-9288953b3ab2';
+var api_key = 'RGAPI-f1eceff4-826c-4e50-82a3-42229c16a931';
 
 app.route('/api/summoner/:name').get((req, res) => {
 	var getreq = https.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+ req.params.name + "?api_key=" + api_key, function(result) {
