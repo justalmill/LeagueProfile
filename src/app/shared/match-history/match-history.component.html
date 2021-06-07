@@ -1,18 +1,20 @@
 <div *ngFor="let game of matchHistory">
-    <div class="match-container">
-        <div style="display:flex; flex:wrap">
-            <div class="" style="display:flex; width: 140px;">
-                <div class="icon-name">
-                    <img class="champ-icon" style="margin:auto; display: block;"
-                        src="http://localhost:8080/dragon/img/champion/{{game.player.championName}}.png">
-                    <p style="text-align: center;">{{game.player.championName}}</p>
+    <div class="match-container" [ngClass]="{'match-won': game.player.win, 'match-loss': !game.player.win, 'match-early-surrender': game.player.teamEarlySurrendered}">
+        <div style="display: flex; flex: wrap;">
+            <div style="display: table;">
+                <div class="" style="display:flex; width: 120px;">
+                    <div class="icon-name">
+                        <img class="champ-icon" style="margin:auto; display: block;"
+                            src="http://localhost:8080/dragon/img/champion/{{game.player.championName}}.png">
+                    </div>
+                    <div class="" style="margin: auto; margin-top: 3px;">
+                        <img style="height: 26px; width: 26px;"
+                            src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner1Name}}.png">
+                        <img style="height: 26px; width: 26px;"
+                            src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner2Name}}.png">
+                    </div>
                 </div>
-                <div class="" style="margin: auto;">
-                    <img style="height: 32px; width: 32px;"
-                        src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner1Name}}.png">
-                    <img style="height: 32px; width: 32px;"
-                        src="http://localhost:8080/dragon/img/spell/Summoner{{game.player.summoner2Name}}.png">
-                </div>
+                <p style="text-align: center;">{{game.player.championName}}</p>
             </div>
             <div class="col-md-1">
                 <p>{{game.info.gameMode}}</p>

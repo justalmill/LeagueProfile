@@ -1,1 +1,4 @@
 p{margin-bottom: 0;}
+.match-won {background-color: #e3ffe3;}
+.match-loss {background-color: #ffd4d4;}
+.match-early-surrender {background-color: #ececec;}
