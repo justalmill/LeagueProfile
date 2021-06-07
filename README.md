@@ -14,4 +14,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-![image](https://user-images.githubusercontent.com/50275799/113182904-6c17b080-9221-11eb-8c92-800a48aba265.png)
+![image](https://user-images.githubusercontent.com/50275799/120942908-df461300-c6f9-11eb-8c87-175609396cab.png)
